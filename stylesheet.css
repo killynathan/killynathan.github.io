@@ -1,0 +1,120 @@
+* {
+	margin: 0;
+	padding: 0;
+	font-family: "Josefin Sans";
+}
+
+html, body {
+	height: 100%;
+	width: 100%;
+}
+
+#wrapper {
+	height: 100%;
+	width: 100%;
+	display: flex;
+}
+
+/* NAV --- NAV --- NAV --- NAV --- NAV --- NAV --- NAV --- NAV --- NAV */
+#nav {
+	height: 100%;
+	width: 180px;
+	background-color: #131414;#2A3132;
+	color: white;
+	display: inline-block;
+	position: fixed;
+	text-align: center;
+}
+
+#logo {
+	font-family: "times new roman";
+	font-style: italic;
+	font-size: 40px;
+
+	margin-top: 30px;
+}
+
+#menu {
+	position: absolute;
+	bottom: 100px;
+	text-align: center;
+	left: 0;
+	width: 100%;
+}
+
+#menu li {
+	margin-top: 15px;
+	font-size: 13px;
+	cursor: pointer;
+}
+
+#menu li:hover {
+	color: crimson;
+}
+
+#nav i {
+	font-size: 30px;
+	position: absolute;
+	bottom: 20px;
+	color: white;
+	left: 76px;
+}
+
+#nav i:hover {
+	color: crimson;
+}
+
+
+/* MAIN --- MAIN --- MAIN --- MAIN --- MAIN --- MAIN --- MAIN --- MAIN */
+
+#main {
+	background-color: red;
+	height: 300%;
+	display: inline-block;
+	flex-grow: 100;
+	padding-left: 180px;
+}
+
+/* JUMBOTRON --- JUMBOTRON --- JUMBOTRON --- JUMBOTRON --- JUMBOTRON */
+
+#jumbotronBorder {
+	height: 100vh;
+	width: 100%;
+	position: relative;
+	background-color: #131414;
+}
+
+#jumbotron {
+	height: 95%;
+	width: 96%;
+
+	position: absolute;
+	top: 0; right: 0; bottom: 0; left: 0;
+	display: block;
+	margin: auto;
+
+	background-image: url("pomodoro.png");
+	background-repeat: no-repeat;
+	background-position: center center;
+	background-size: cover;
+}
+
+/* WORK --- WORK --- WORK --- WORK --- WORK --- WORK --- WORK --- WORK */
+
+#work {
+	height: 200vh;
+	width: 100%;
+	background-color: #1C2229;
+}
+
+.workBlock {
+	
+}
+
+/* ABOUT --- ABOUT --- ABOUT --- ABOUT --- ABOUT --- ABOUT --- ABOUT */
+
+#about {
+	width: 100%;
+	height: 400px;
+	background-color: white;
+}
