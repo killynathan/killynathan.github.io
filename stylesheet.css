@@ -84,19 +84,57 @@ html, body {
 	background-color: #131414;
 }
 
-#jumbotron {
-	height: 95%;
-	width: 96%;
+#jumbotronWrapper {
+	height: 100%;95%;
+	width: 100%;96%;
 
 	position: absolute;
 	top: 0; right: 0; bottom: 0; left: 0;
 	display: block;
 	margin: auto;
+	overflow: hidden;
+}
 
-	background-image: url("pomodoro.png");
+.jumbotron {
+	height: 100%;
+	width: 110%;
 	background-repeat: no-repeat;
 	background-position: center center;
 	background-size: cover;
+	position: absolute;
+}
+
+#jumbotron1 {
+	background-image: url("pomodoro.png");
+}
+
+#jumbotron2 {
+	background-image: url("background4.jpg");
+	opacity: 0;
+}
+
+#jumbotron3 {
+	background-image: url("seuss.png");
+	opacity: 0;
+}
+
+.animateJumbotron {
+	animation: animateJumbotron 5s linear forwards;
+}
+
+@keyframes animateJumbotron {
+	0% {transform: translateX(-8px); opacity: 100}
+	75% {opacity: 100}
+	100% {transform: translateX(-28px); opacity: 0}
+}
+
+.fadeIn {
+	animation: fadeIn 2s linear forwards;
+}
+
+@keyframes fadeIn {
+	from {opacity: 0; transform: translateX(0px);}
+	to {opacity: 100; transform: translateX(-8px);}
 }
 
 /* WORK --- WORK --- WORK --- WORK --- WORK --- WORK --- WORK --- WORK */
@@ -108,7 +146,7 @@ html, body {
 }
 
 .workBlock {
-	
+
 }
 
 /* ABOUT --- ABOUT --- ABOUT --- ABOUT --- ABOUT --- ABOUT --- ABOUT */
