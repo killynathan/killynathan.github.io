@@ -1,7 +1,7 @@
 var jumbotron1 = document.getElementById("jumbotron1");
 var jumbotron2 = document.getElementById("jumbotron2");
 var jumbotron3 = document.getElementById("jumbotron3");
-var logo = document.getElementById("logo");
+var jumbotron4 = document.getElementById("jumbotron4");
 
 var setIntervalId;
 var index = 2;
@@ -20,6 +20,7 @@ function getJumbotron(index) {
 		case 1: return jumbotron1;
 		case 2: return jumbotron2;
 		case 3: return jumbotron3;
+		case 4: return jumbotron4;
 	}
 }
 
@@ -31,7 +32,7 @@ function animateJumbotron() {
 		//nextJumbotron.classList.add("animateJumbotron");
 
 		index++;
-		if (index == 4) index = 1;
+		if (index == 5) index = 1;
 	}
 
 	else if (counter === 50) {
