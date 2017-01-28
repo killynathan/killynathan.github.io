@@ -3,13 +3,18 @@ var jumbotron2 = document.getElementById("jumbotron2");
 var jumbotron3 = document.getElementById("jumbotron3");
 var jumbotron4 = document.getElementById("jumbotron4");
 
+var workGameButton = document.getElementById("workGame");
+var workPomodoroButton = document.getElementById("workPomodoro");
+var workQuoteButton = document.getElementById("workQuote");
+var workSnakeButton = document.getElementById("workSnake");
+
 var setIntervalId;
 var index = 2;
 var counter = 0;
 var nextJumbotron;
 var currentJumbotron = jumbotron1;
 
-// JUMBOTRON --- JUMBOTRON --- JUMBOTRON --- JUMBOTRON --- JUMBOTRON 
+// JUMBOTRON --- JUMBOTRON --- JUMBOTRON --- JUMBOTRON --- JUMBOTRON --- JUMBOTRON 
 
 function startAnimatingJumbotron() {
 	setIntervalId = setInterval(animateJumbotron, 100);
@@ -49,3 +54,12 @@ function animateJumbotron() {
 }
 
 startAnimatingJumbotron();
+
+// WORK --- WORK --- WORK --- WORK --- WORK --- WORK --- WORK --- WORK --- WORK  
+
+function displayWorkGame() {
+	
+}
+
+
+

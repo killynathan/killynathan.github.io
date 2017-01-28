@@ -108,26 +108,23 @@ html, body {
 	background-position: center center;
 	background-size: cover;
 	position: absolute;
+	opacity: 0;
 }
 
 #jumbotron1 {
 	background-image: url("pomodoro.png");
-	opacity: 0;
 }
 
 #jumbotron2 {
 	background-image: url("seuss.png");
-	opacity: 0;
 }
 
 #jumbotron3 {
 	background-image: url("snake.png");
-	opacity: 0;
 }
 
 #jumbotron4 {
-	background-image: url("browserquest.png");
-	opacity: 0;
+	background-image: url("game2.png");
 }
 
 .animateJumbotron {
@@ -153,9 +150,10 @@ html, body {
 
 #work {
 	color: white;
-	height: 2000px;
+	height: 100vh;
 	width: 100%;
-	background-color: #1C2229;
+	background-color: black;#1C2229;
+	position: relative;
 }
 
 .workBlock {
@@ -167,6 +165,33 @@ html, body {
 
 .workBlock img {
 	width: 100%;
+}
+
+#workMenu {
+	text-align: right;
+	position: absolute;
+	top: 18px;
+	right: 33px;
+}
+
+#workMenu li {
+	font-size: 18px;
+	cursor: pointer;
+	list-style-type: none;
+	margin-bottom: 10px;
+}
+
+.workDisplay {
+	height: 100%;
+	width: 100%;
+	background-repeat: no-repeat;
+	background-position: center center;
+	background-size: cover;
+	position: absolute;
+}
+
+#workGameDisplay {
+	background-image: url("browserquest.png");
 }
 
 /* ABOUT --- ABOUT --- ABOUT --- ABOUT --- ABOUT --- ABOUT --- ABOUT */
