@@ -46,7 +46,8 @@ html, body {
 #menu li {
 	margin-top: 15px;
 	font-size: 13px;
-	cursor: pointer;	
+	cursor: pointer;
+	list-style-type: none;		
 }
 
 #menu a:hover {
@@ -132,9 +133,9 @@ html, body {
 }
 
 @keyframes animateJumbotron {
-	0% {transform: translateX(-8px); opacity: 100}
+	0% {transform: translateX(-30px); opacity: 100}
 	75% {opacity: 100}
-	100% {transform: translateX(-28px); opacity: 0}
+	100% {transform: translateX(-100px); opacity: 0}
 }
 
 .fadeIn {
@@ -143,24 +144,24 @@ html, body {
 
 @keyframes fadeIn {
 	from {opacity: 0; transform: translateX(0px);}
-	to {opacity: 100; transform: translateX(-8px);}
+	to {opacity: 100; transform: translateX(-30px);}
 }
 
 /* WORK --- WORK --- WORK --- WORK --- WORK --- WORK --- WORK --- WORK */
 
 #work {
+	padding-top: 50px;
 	color: white;
-	height: 100vh;
+	height: 1500px;
 	width: 100%;
-	background-color: black;#1C2229;
+	background-color: #1C2229;
 	position: relative;
 }
 
 .workBlock {
 	width: 90%;
-	background-color: green;
-	height: 300px;
 	margin: 0 auto;
+	padding-top: 25px;
 }
 
 .workBlock img {
