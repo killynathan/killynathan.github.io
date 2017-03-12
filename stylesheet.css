@@ -98,7 +98,7 @@ html, body {
 	color: black;
 	z-index: 99;
 	position: absolute;
-	bottom: 10px;
+	bottom: 2px;
 }
 
 .jumbotron {
@@ -110,7 +110,7 @@ html, body {
 	position: absolute;
 	top: 0;
 	opacity: 0;
-	filter: grayscale(.8) opacity(.5); sepia(1) opacity(.8); 
+	filter: grayscale(0) opacity(.3); sepia(1) opacity(.8); 
 }
 
 #jumbotron1 {
@@ -177,35 +177,57 @@ html, body {
 	padding-top: 25px;
 }
 
-.workBlock img {
-	width: 100%;
+.workElementWrapper {
+	height: 300px;
+	overflow: hidden;
+	background-color: white;
+	position: relative;
+	color: black;
+
+	display : flex;
+ 	align-items : center;
+ 	justify-content: center;
 }
 
-#workMenu {
-	text-align: right;
-	position: absolute;
-	top: 18px;
-	right: 33px;
+.workElementWrapper p {
+
 }
 
-#workMenu li {
-	font-size: 18px;
-	cursor: pointer;
-	list-style-type: none;
-	margin-bottom: 10px;
-}
-
-.workDisplay {
-	height: 100%;
+.workElement {
+	height: 300px;
 	width: 100%;
 	background-repeat: no-repeat;
 	background-position: center center;
 	background-size: cover;
+	transition: all 0.2s ease-in-out;
 	position: absolute;
+	top: 0px;
+	left: 0px;
 }
 
-#workGameDisplay {
-	background-image: url("browserquest.png");
+.workElement:hover {
+	transform: scale(1.1,1.1);
+	filter: grayscale(.8) opacity(.3);
+}
+
+#testt {
+	height: 100px;
+	width: 100px;
+	transition: all 0.2s ease-in-out;
+	background-image: linear-gradient(rgba(255,255,255,0.5),rgba(255,255,255,0.5)), url("pomodoro.png");
+
+}
+
+#testt:hover {
+	transform: scale(1.3,1.3	);
+	background-image: rgba(0, 0, 0, .5);
+		background-image: linear-gradient(rgba(255,255,255,0.5),rgba(255,255,255,0.5));
+
+}
+
+@keyframes hoverEffect{
+	0% {transform: scale(1,1);}
+	100% {transform: scale(1.3,1.3	);}
 }
 
 /* ABOUT --- ABOUT --- ABOUT --- ABOUT --- ABOUT --- ABOUT --- ABOUT */
