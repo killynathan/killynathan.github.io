@@ -30,9 +30,9 @@ html, body {
 }
 
 #title {
-	font-family: "times new roman";
+	font-family: "Roboto";"times new roman";
 	font-style: italic;
-	font-size: 4em;60px;
+	font-size: 50px;4em;60px;
 	color: white;
 	z-index: 99;
 	position: absolute;
