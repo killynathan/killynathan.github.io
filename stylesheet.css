@@ -23,6 +23,7 @@ body {
 #nav {
 	background-color: black;
 	color: white;
+	padding-bottom: 30px;
 }
 
 #logo {
@@ -49,10 +50,44 @@ body {
 	cursor: pointer;
 }
 
+#menuWeb:hover ~ #ball {
+	left: 9px !important;
+}
+
+#menuAbout:hover ~ #ball {
+	left: 92px !important;
+}
+
+#menuBlog:hover ~ #ball {
+	left: 177px !important;
+}
+
+#ball {
+	height: 10px;
+	width: 10px;
+	background-color: #FF69B4;
+	border-radius: 100%;
+	position: relative;
+	transition: all 0.5s;
+	left: 9px;
+	top: 5px;
+}
+
 #content {
+	height: 100vh;
 	padding-bottom: 50px;
 	padding-top: 30px;
 	background-color: black;
+	position: relative;
+	overflow: hidden;
+}
+
+#web {
+	height: 100%;
+	width: 100%;
+	position: absolute;
+	top: 0;
+	transition: all 1s;
 }
 
 .webWorkWrapper {
@@ -64,8 +99,24 @@ body {
 	height: 100%;
 	padding-left: 10px;
 	padding-right: 10px;
+	cursor: pointer;
 	background-repeat: no-repeat;
 	background-position: center center;
 	background-size: cover;
+}
 
+.webWork:hover {
+	filter: grayscale(1);
+}
+
+#about {
+	height: 100%;
+	width: 100%;
+	background-color: black;
+	z-index: 99;
+	position: absolute;
+	top: 0;
+	right: 110%;
+	transition: all 1s;
+	color: white;
 }
