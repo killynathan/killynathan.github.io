@@ -23,25 +23,44 @@ body {
 #nav {
 	background-color: black;
 	color: white;
-	padding-bottom: 30px;
+	padding-bottom: 40px;
+	padding-top: 20px;
 }
 
 #logo {
+	height: 70px;
+}
+
+#name {
 	font-style: italic;
-	font-size: 50px;
+	font-size: 40px;
 	font-family: 'Roboto', 'Times New Roman';
 	display: inline-block;
 	margin-left: 10px;
-	margin-top: 30px;
+	position: relative;
+	top: 15px;
+}
+
+#github {
+	float: right;
+	position: relative;
+	top: 33px;
+	cursor: pointer;
+	transition: all 0.3s;
+	color: white;
+}
+
+#github:hover {
+	transform: scale(1.3,1.3)
 }
 
 #menu {
 	list-style-type: none;
-	display: inline-block;
 	position: relative;
-	left: 40px;
-	bottom: 10px;
+	top: 5px;
 	font-family: 'Roboto', 'Times New Roman';
+	width: 290px;
+	margin: 0 auto;
 }
 
 #menu li {
@@ -79,7 +98,6 @@ body {
 	padding-top: 30px;
 	background-color: black;
 	position: relative;
-	overflow: hidden;
 }
 
 #web {
@@ -113,10 +131,10 @@ body {
 	height: 100%;
 	width: 100%;
 	background-color: black;
-	z-index: 99;
+	opacity: 0;
 	position: absolute;
 	top: 0;
-	right: 110%;
 	transition: all 1s;
 	color: white;
+	z-index: -1;
 }
