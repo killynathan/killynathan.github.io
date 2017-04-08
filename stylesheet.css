@@ -23,8 +23,9 @@ body {
 #nav {
 	background-color: black;
 	color: white;
-	padding-bottom: 40px;
+	padding-bottom: 25px;
 	padding-top: 20px;
+	border-bottom: 1px solid white;
 }
 
 #logo {
@@ -56,16 +57,16 @@ body {
 
 #menu {
 	list-style-type: none;
-	position: relative;
-	top: 5px;
+	
 	font-family: 'Roboto', 'Times New Roman';
 	width: 290px;
-	margin: 0 auto;
+	float: right;
+	margin-top: 30px;
 }
 
 #menu li {
 	display: inline-block;
-	margin-right: 50px;
+	margin-left: 50px;
 	cursor: pointer;
 }
 
@@ -95,9 +96,10 @@ body {
 #content {
 	height: 100vh;
 	padding-bottom: 50px;
-	padding-top: 30px;
 	background-color: black;
 	position: relative;
+	width: 90%;
+	margin: 50px auto;
 }
 
 #web {
@@ -109,14 +111,19 @@ body {
 }
 
 .webWorkWrapper {
-	height: 200px;
+	/*height: 250px;*/
 	margin-bottom: 40px;
+	position: relative;	
+	/*padding-bottom: 5%;*/
 }
 
 .webWork {
-	height: 100%;
-	padding-left: 10px;
-	padding-right: 10px;
+	/*height: 100%;*/
+	width: 97%;
+	margin: 0 auto;
+	/*padding-left: 10px;
+	padding-right: 10px;*/
+	padding-bottom: 60%;
 	cursor: pointer;
 	background-repeat: no-repeat;
 	background-position: center center;
