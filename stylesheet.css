@@ -18,10 +18,10 @@ body {
 	height: 100vh;
 	padding-bottom: 70px;
 	max-width: 1000px;
+  box-sizing: border-box;
 }
 
 #nav {
-	background-color: black;
 	color: white;
 	padding-bottom: 40px;
 	padding-top: 50px;
@@ -37,15 +37,11 @@ body {
 	color: red;
 }
 
-#name:hover {
-	color: red;
-}
-
 #github {
 	position: relative;
 	top: 5px;
 	cursor: pointer;
-	transition: all 0.3s;	
+	transition: all 0.3s;
 	color: white
 }
 
@@ -75,33 +71,25 @@ body {
 	color: red;
 }
 
-#menuWeb:hover ~ #ball {
-	left: 9px !important;
+#home {
+  display: block;
+  height: 100%;
+  left: 0;
+  position: absolute;
+  top: 0;
+  width: 100%;
+  z-index: -1;
 }
 
-#menuAbout:hover ~ #ball {
-	left: 92px !important;
-}
-
-#menuBlog:hover ~ #ball {
-	left: 177px !important;
-}
-
-#ball {
-	height: 10px;
-	width: 10px;
-	background-color: black !important; #FF69B4;
-	border-radius: 100%;
-	position: relative;
-	transition: all 0.5s;
-	left: 9px;
-	top: 5px;
+canvas {
+  height: 99%;
+  width: 100%;
 }
 
 #content {
-	height: 100vh;
+	/*height: 100vh;
 	padding-bottom: 50px;
-	background-color: black;
+	background-color: black;*/
 	position: relative;
 	font-family: 'Abel';
 }
@@ -112,6 +100,7 @@ body {
 	position: absolute;
 	top: 0;
 	transition: all 1s;
+  display: none
 }
 
 .webWorkTitle {
@@ -132,7 +121,7 @@ body {
 	background-repeat: no-repeat;
 	background-position: center center;
 	background-size: cover;
-	filter: saturate(5);
+	/*filter: saturate(5);*/
 }
 
 .webWork:hover {
@@ -142,13 +131,11 @@ body {
 #about {
 	height: 100%;
 	width: 100%;
-	background-color: black;
-	opacity: 0;
+	display: none;
 	position: absolute;
 	top: 0;
 	transition: all 1s;
 	color: white;
-	z-index: -1;
 }
 
 @media (max-width: 520px) {
