@@ -1,3 +1,8 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
 .App {
   text-align: center;
 }
@@ -8,7 +13,13 @@
 }
 
 .App-header {
-  background-color: #282c34;
+  /* background-color: #282c34; */
+  background-image: linear-gradient(
+      to right bottom,
+      rgb(26, 38, 36),
+      rgb(0, 0, 0)
+    ),
+    linear-gradient(transparent, rgb(0, 0, 0) 70%);
   min-height: 100vh;
   display: flex;
   flex-direction: column;
@@ -29,4 +40,36 @@
   to {
     transform: rotate(360deg);
   }
+}
+
+.project {
+  background-color: #181818;
+  border-radius: 3%;
+  /* padding: 16px; */
+  width: 200px;
+  font-family: "Roboto";
+  text-align: left;
+}
+
+.project-content {
+  padding: 16px;
+}
+
+.project-title {
+  font-size: 1.5rem;
+  margin-bottom: 0.35em;
+  line-height: 1.33;
+}
+
+.project-description {
+  font-size: 0.875rem;
+  line-height: 1.5;
+  letter-spacing: 0.01071em;
+}
+
+.text-button {
+  font-size: 0.8125rem;
+  font-weight: 500;
+  letter-spacing: 0.02857em;
+  line-height: 1.75;
 }
