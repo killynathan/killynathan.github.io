@@ -1,80 +1,93 @@
-import React, { Component } from "react";
-import logo from "./logo.svg";
+import React, { useState } from "react";
 import "./App.css";
 import Project from "./components/Project";
+import BlogPosts from "./components/BlogPosts";
+import works from "./works";
 
-const projects = [
-  {
-    title: "Personality.ai",
-    description: "Lookup the personality of a social media profile",
-    github: "https://github.com/killynathan/personalityAnalyzer",
-    link: "https://personality-ai.herokuapp.com/",
-    height: 150
-  },
-  {
-    title: "Personality Tracker",
-    description: "Keep track of how much work you have done",
-    github: "https://github.com/killynathan/productivityTracker",
-    link: "https://killynathan.github.io/productivityTracker",
-    height: 120
-  },
-  {
-    title: "Bouncem",
-    description: "A multiplayer PvP game where you bounce your way to victory",
-    github: "https://github.com/killynathan/bouncem",
-    link: "https://bouncem.herokuapp.com/",
-    height: 130
-  },
-  {
-    title: "WATCHIT",
-    description: "Find and learn about movies",
-    github: "https://github.com/killynathan/watchit",
-    link: "https://killynathan.github.io/watchit",
-    height: 180
-  },
-  {
-    title: "Pomodoro",
-    description: "Lookup the personality of a social media profile",
-    github: "https://github.com/killynathan/Pomodoro",
-    link: "https://killynathan.github.io/Pomodoro",
-    height: 190
-  },
-  {
-    title: "Quote Generator",
-    description: "Find a quote to pick you up",
-    github: "https://github.com/killynathan/quote-generator",
-    link: "https://killynathan.github.io/quote-generator",
-    height: 200
-  },
-  {
-    title: "Snake",
-    description: "Basic snake game",
-    github: "https://github.com/killynathan/snake",
-    link: "https://killynathan.github.io/snake",
-    height: 150
-  }
-];
-
-class App extends Component {
-  render() {
-    return (
-      <div className="App">
-        <div className="App-header">
-          <div id="projects">
-            {projects.map(project => (
-              <div
-                className="project-wrapper"
-                style={{ height: project.height }}
-                key={project.title}
-              >
-                <Project {...project} />
-              </div>
-            ))}
-          </div>
+const App = () => {
+  const [tab, setTab] = useState("works");
+  const inWorks = tab === "works";
+  const inBlog = tab === "blog";
+  const rows = works.reduce(
+    (acc, project, i) => {
+      console.log("!!", acc);
+      acc[i % 3].push(project);
+      return acc;
+    },
+    [[], [], []]
+  );
+  return (
+    <div className="App">
+      <div className="content">
+        <div
+          style={{ paddingTop: 50, display: "flex", flexDirection: "column" }}
+        >
+          <h2 style={{ color: "rgb(66, 133, 244)", marginBottom: 20 }}>
+            Nate K.
+          </h2>
+          <p style={{ color: "white", marginBottom: 5 }}>
+            Developer interested in Javascript and React.js
+          </p>
+          <a
+            style={{
+              color: "white",
+              textDecoration: "underline",
+              marginBottom: 30
+            }}
+            href="https://github.com/killynathan"
+            target="_blank"
+          >
+            github
+          </a>
+          <p style={{ color: "white", marginBottom: 5, alignSelf: "center" }}>
+            <span
+              style={{
+                ...(inWorks && {
+                  fontWeight: "bold",
+                  color: "rgb(66, 133, 244)"
+                }),
+                cursor: "pointer"
+              }}
+              onClick={() => setTab("works")}
+            >
+              Works
+            </span>
+            <span style={{ fontSize: 12, marginLeft: 10, marginRight: 10 }}>
+              |
+            </span>
+            <span
+              style={{
+                ...(inBlog && {
+                  fontWeight: "bold",
+                  color: "rgb(66, 133, 244)"
+                }),
+                cursor: "pointer"
+              }}
+              onClick={() => setTab("blog")}
+            >
+              Blog
+            </span>
+          </p>
         </div>
+        {inWorks && (
+          <div className="App-header">
+            <div id="projects">
+              {rows.map((row, i) => (
+                <div className="projects-row" key={i}>
+                  {row.map(project => (
+                    <div className="project-wrapper">
+                      <Project {...project} />
+                    </div>
+                  ))}
+                </div>
+              ))}
+            </div>
+          </div>
+        )}
+        {inBlog && <BlogPosts />}
       </div>
-    );
-  }
-}
+    </div>
+  );
+};
 
 export default App;

@@ -4,20 +4,27 @@
   box-sizing: border-box;
 }
 
-.App-logo {
-  animation: App-logo-spin infinite 20s linear;
-  height: 40vmin;
-}
-
-.App-header {
-  /* background-color: #282c34; */
-  background-image: linear-gradient(
+.App {
+  display: flex;
+  justify-content: center;
+  /* background-image: linear-gradient(
       to right bottom,
       rgb(26, 38, 36),
       rgb(0, 0, 0)
     ),
-    linear-gradient(transparent, rgb(0, 0, 0) 70%);
+    linear-gradient(transparent, rgb(0, 0, 0) 70%); */
+  background-color: rgb(3, 3, 3);
   min-height: 100vh;
+  justify-content: center;
+  padding-bottom: 40px;
+}
+
+.content {
+  width: 900px;
+}
+
+.App-header {
+  /* background-color: #282c34; */
   display: flex;
   /* flex-direction: column; */
   align-items: center;
@@ -27,40 +34,38 @@
 }
 
 #projects {
-  width: 1000px;
+  /* width: 1000px; */
   display: flex;
-  flex-flow: column wrap;
-  max-width: 100%;
+  margin-left: -11px;
+  margin-right: -11px;
 }
 
 .project-wrapper {
-  /* flex-basis: 20%; */
-  padding: 20px;
+  /* padding: 20px;
   flex: 1 0 auto;
-  overflow: hidden;
+  overflow: hidden; */
+  padding: 11px;
 }
 
 .project {
-  width: 100%;
+  /* width: 100%;
   height: 100%;
+  max-width: 100%; */
 }
 
 .App-link {
   color: #61dafb;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.projects-row {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
 }
 
 .project {
   background-color: #181818;
-  border-radius: 3%;
+  border-radius: 3px;
   /* padding: 16px; */
   /* width: 200px; */
   font-family: "Roboto";
